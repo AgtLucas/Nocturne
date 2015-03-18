@@ -8,13 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var toDoItems = [ToDoItem]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+        if toDoItems.count > 0 {
+            return
+        }
+        toDoItems.append(ToDoItem(text: "Read the lectures"))
+        toDoItems.append(ToDoItem(text: "Rule the web"))
+        toDoItems.append(ToDoItem(text: "Ask more"))
+        toDoItems.append(ToDoItem(text: "Buy Apples"))
+        toDoItems.append(ToDoItem(text: "Buy Potatoes"))
+        toDoItems.append(ToDoItem(text: "Master Swift"))
+        toDoItems.append(ToDoItem(text: "Learn Guitar"))
+        toDoItems.append(ToDoItem(text: "Study for the test"))
+        toDoItems.append(ToDoItem(text: "Write a blog post"))
+        toDoItems.append(ToDoItem(text: "Go for a walk"))
+        toDoItems.append(ToDoItem(text: "Master Objective-C"))
+    }
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return toDoItems.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let item = toDoItems[indexPath.row]
+
+        cell.textLabel?.text = item.text
+        return cell
     }
 
 
