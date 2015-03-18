@@ -38,6 +38,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toDoItems.append(ToDoItem(text: "Write a blog post"))
         toDoItems.append(ToDoItem(text: "Go for a walk"))
         toDoItems.append(ToDoItem(text: "Master Objective-C"))
+        toDoItems.append(ToDoItem(text: "Master JavaScript"))
+        toDoItems.append(ToDoItem(text: "Master Node.js/io.js"))
+        toDoItems.append(ToDoItem(text: "Rule the universe"))
+        toDoItems.append(ToDoItem(text: "Travel"))
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
