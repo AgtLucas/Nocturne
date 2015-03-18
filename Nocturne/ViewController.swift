@@ -20,6 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        // Styles
+        tableView.separatorStyle = .None
+        tableView.rowHeight = 50.0
 
         if toDoItems.count > 0 {
             return
