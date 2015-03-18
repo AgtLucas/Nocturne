@@ -13,6 +13,7 @@
 		DCE44E4B1AB9A2B20041709E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE44E4A1AB9A2B20041709E /* Images.xcassets */; };
 		DCE44E4E1AB9A2B20041709E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE44E4C1AB9A2B20041709E /* LaunchScreen.xib */; };
 		DCE44E5A1AB9A2B20041709E /* NocturneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE44E591AB9A2B20041709E /* NocturneTests.swift */; };
+		DCE44E641AB9A4FE0041709E /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE44E631AB9A4FE0041709E /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DCE44E531AB9A2B20041709E /* NocturneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NocturneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE44E581AB9A2B20041709E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCE44E591AB9A2B20041709E /* NocturneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NocturneTests.swift; sourceTree = "<group>"; };
+		DCE44E631AB9A4FE0041709E /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				DCE44E431AB9A2B20041709E /* AppDelegate.swift */,
 				DCE44E451AB9A2B20041709E /* ViewController.swift */,
+				DCE44E631AB9A4FE0041709E /* ToDoItem.swift */,
 				DCE44E471AB9A2B20041709E /* Main.storyboard */,
 				DCE44E4A1AB9A2B20041709E /* Images.xcassets */,
 				DCE44E4C1AB9A2B20041709E /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				DCE44E461AB9A2B20041709E /* ViewController.swift in Sources */,
 				DCE44E441AB9A2B20041709E /* AppDelegate.swift in Sources */,
+				DCE44E641AB9A4FE0041709E /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
