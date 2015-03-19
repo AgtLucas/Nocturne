@@ -56,6 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as TableViewCell
         let item = toDoItems[indexPath.row]
 
+        cell.textLabel?.backgroundColor = UIColor.clearColor()
         cell.textLabel?.text = item.text
         return cell
     }
