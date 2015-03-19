@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "cell")
         // Styles
         tableView.separatorStyle = .None
+        tableView.backgroundColor = UIColor.blackColor()
         tableView.rowHeight = 50.0
 
         if toDoItems.count > 0 {
