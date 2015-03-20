@@ -18,6 +18,8 @@ class TableViewCell: UITableViewCell {
     let gradientLayer = CAGradientLayer()
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
+    var delegate: TableViewCellDelegate?
+    var toDoItem: ToDoItem!
 
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported.")
