@@ -69,7 +69,7 @@ class TableViewCell: UITableViewCell {
 
         if deleteOnDragRelease {
             if delegate != nil && toDoItem != nil {
-                delegate!.toDoItemDeleted(toDoItem)
+                delegate!.toDoItemDeleted(toDoItem!)
             }
         }
     }
