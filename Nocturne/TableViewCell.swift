@@ -9,6 +9,10 @@
 import UIKit
 import QuartzCore
 
+protocol TableViewCellDelegate {
+    func toDoItemDeleted(todoItem: ToDoItem)
+}
+
 class TableViewCell: UITableViewCell {
 
     let gradientLayer = CAGradientLayer()
