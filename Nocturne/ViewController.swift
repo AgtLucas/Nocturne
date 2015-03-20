@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -60,6 +60,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         cell.textLabel?.backgroundColor = UIColor.clearColor()
         cell.textLabel?.text = item.text
+        cell.delegate = self
+        cell.toDoItem = item
+
         return cell
     }
 
