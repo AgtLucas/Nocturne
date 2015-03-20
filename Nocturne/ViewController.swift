@@ -63,6 +63,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
 
+    func toDoItemDeleted(toDoItem: ToDoItem) {
+        let index = (toDoItems as NSArray).indexOfObject(ToDoItem)
+        if index == NSNotFound { return }
+
+        toDoItems.removeAtIndex(index)
+
+        tableView.beginUpdates()
+        let indexPathForRow = NSIndexPath(forRow: index, inSection: 0)
+        tableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Fade)
+        tableView.endUpdates()
+    }
+
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = toDoItems.count - 1
         let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
