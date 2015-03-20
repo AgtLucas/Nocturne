@@ -12,6 +12,8 @@ import QuartzCore
 class TableViewCell: UITableViewCell {
 
     let gradientLayer = CAGradientLayer()
+    var originalCenter = CGPoint()
+    var deleteOnDragRelease = false
 
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported.")
