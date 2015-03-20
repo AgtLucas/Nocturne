@@ -19,7 +19,7 @@ class TableViewCell: UITableViewCell {
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
     var delegate: TableViewCellDelegate?
-    var toDoItem: ToDoItem!
+    var toDoItem: ToDoItem?
 
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported.")
