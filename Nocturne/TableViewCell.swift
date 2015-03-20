@@ -28,6 +28,10 @@ class TableViewCell: UITableViewCell {
         gradientLayer.colors = [color1, color2, color3, color4]
         gradientLayer.locations = [0.0, 0.01, 0.95, 1.0]
         layer.insertSublayer(gradientLayer, atIndex: 0)
+
+        var recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        recognizer.delegate = self
+        addGestureRecognizer(recognizer)
     }
 
     override func layoutSubviews() {
