@@ -66,6 +66,12 @@ class TableViewCell: UITableViewCell {
                 UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
             }
         }
+
+        if deleteOnDragRelease {
+            if delegate != nil && toDoItem != nil {
+                delegate!.toDoItemDeleted(toDoItem)
+            }
+        }
     }
 
     override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
